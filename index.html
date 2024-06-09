@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap">
+	<link rel="stylesheet" href="style.css"/>
+	<title>Mega</title>
+</head>
+
+<body style="display:none">
+	<div class="wrapper">
+		<main class="mega">
+			<div class="mega__container">
+				<section class="mega__fraction-reduce fraction-reduce">
+					<div class="fraction-reduce__fraction">
+						<div class="fraction-reduce__numerator number-input">
+							<input type="number" class="fraction-reduce_top-rounded">
+						</div>
+						<div class="dash"></div>
+						<div class="fraction-reduce__denominator number-input">
+							<input type="number" class="fraction-reduce_bottom-rounded">
+						</div>
+					</div>
+					<div class="equal">=</div>
+					<div class="fraction-reduce__result-fraction">
+						<div class="fraction-reduce__result-numerator result fraction-reduce_top-rounded"></div>
+						<div class="dash"></div>
+						<div class="fraction-reduce__result-denominator result fraction-reduce_bottom-rounded"></div>
+					</div>
+				</section>
+
+				<section class="mega__percent percent">
+					<div class="percent__body">
+						<div class="percent__percent-part math-group">
+							<div class="percent__percent-part-input number-input">
+								<input type="number">
+							</div>
+							<div class="percent__label math-label">%</div>
+							<button class="percent__switch"></button>
+						</div>
+						<div class="dash"></div>
+						<div class="math-group">
+							<div class="math-label">от</div>
+							<div class="percent__total number-input">
+								<input type="number">
+							</div>
+						</div>
+					</div>
+					<div class="equal">=</div>
+					<div class="percent__result result"></div>
+				</section>
+
+				<section class="mega__pow pow">
+					<div class="math-group">
+						<div class="pow__base number-input">
+							<input type="number">
+						</div>
+						<div class="pow__pow-value mini-input">
+							<input type="number">
+						</div>
+					</div>
+					<div class="equal">=</div>
+					<div class="pow__result result"></div>
+				</section>
+
+				<section class="mega__root root">
+					<div class="math-group">
+						<div class="root__pow mini-input">
+							<input type="number" placeholder="2">
+						</div>
+						<div class="root__sign math-label">√</div>
+						<div class="root__radicand number-input">
+							<input type="number">
+						</div>
+					</div>
+					<div class="equal">=</div>
+					<div class="root__result result"></div>
+				</section>
+
+				<section class="mega__log log">
+					<div class="math-group">
+						<div class="math-label">log</div>
+						<div class="log__base mini-input">
+							<input type="number" placeholder="e">
+						</div>
+						<div class="log__argument number-input">
+							<input type="number">
+						</div>
+					</div>
+					<div class="equal">=</div>
+					<div class="log__result result"></div>
+				</section>
+
+				<section class="mega__buttons buttons">
+					<div class="buttons__calculate">
+						<button>(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</button>
+					</div>
+					<div class="buttons__reset">
+						<button>Сбросить</button>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

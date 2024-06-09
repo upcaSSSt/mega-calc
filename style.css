@@ -1,0 +1,247 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {text-decoration: none;}
+ul, ol, li {list-style: none;}
+img {vertical-align: top;}
+input:focus, select:focus, textarea:focus {outline: none;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0; 
+}
+input[type=number] {
+    appearance: textfield;
+}
+h1, h2, h3, h4, h5, h6, input, select, textarea, button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    text-align: inherit;
+}
+button {-webkit-tap-highlight-color: transparent;}
+html, body {
+    height: 100%;
+    line-height: 1;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+
+::placeholder {
+    color: #000;
+}
+
+._hide {
+    color: transparent;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #800bf5 26%, #25c6f9);
+}
+
+.number-input input, .mini-input input, .result {
+    border-radius: 10px;
+    background-color: #49cbf4;
+    padding: 5px;
+}
+
+.number-input input, .mini-input input {
+    caret-color: transparent;
+    transition-property: background-color, color;
+    transition: .5s ease;
+}
+.number-input input:focus, .mini-input input:focus {
+    background-color: rgba(72, 204, 244, .4);
+}
+
+.number-input {
+	flex-grow: 1;
+}
+.number-input input {
+    width: 100%;
+    height: 50px;
+}
+
+.mini-input input {
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+.dash {
+    width: 100%;
+    height: 3px;
+    border-radius: 6px;
+    background-color: #f3e6bb;
+    margin: 5px 0;
+}
+
+.math-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.math-label {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.equal {
+    font-size: 36px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.result {
+    flex-grow: 1;
+    height: 50px;
+    line-height: 40px;
+    overflow: auto;
+    transition: color .5s ease;
+}
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.mega {
+    padding: 15px 0;
+}
+.mega__container {
+    max-width: 400px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+.mega__container >* {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.mega__container >*:not(:last-child) {
+    margin: 0 0 20px;
+}
+.mega__container >*:not(:last-child)>:first-child {
+    flex: 0 0 45%;
+}
+
+.fraction-reduce_top-rounded {
+    border-radius: 10px 10px 3px 3px;
+}
+.fraction-reduce_bottom-rounded {
+    border-radius: 3px 3px 10px 10px;
+}
+.fraction-reduce__result-fraction {
+    flex-grow: 1;
+}
+
+.percent__percent-part {
+    position: relative;
+}
+.percent__percent-part-input {
+    flex: 0 0 86%;
+}
+.percent__label {
+    justify-self: end;
+    transition: color .5s ease;
+}
+.percent__switch {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    background-color: red;
+}
+
+.pow__pow-value {
+    align-self: start;
+}
+
+.root__pow {
+    align-self: start;
+}
+.root__sign {
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.log__base {
+    align-self: end;
+}
+
+.buttons {
+    align-items: stretch;
+    margin-top: 50px;
+}
+.buttons button {
+    cursor: pointer;
+    height: 100%;
+    border-radius: 15px;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, #7649fe 50%, #5643fd);
+}
+.buttons__calculate {
+    position: relative;
+    z-index: 2;
+}
+.buttons__calculate button::before, .buttons__calculate button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background:
+    radial-gradient(circle,    #f3e6bb 70%, transparent 70%) 10% 5% / 6px 6px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 15% 90% / 4px 4px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 20% 30% / 6px 6px,
+    radial-gradient(circle,    transparent 60%, #f3e6bb 60% 70%, transparent 70%) 30% 50% / 6px 6px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 40% 80% / 6px 6px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 52% 20% / 6px 6px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 65% 70% / 7px 7px,
+    radial-gradient(circle, transparent 60%, #f3e6bb 60% 70%, transparent 70%) 80% 0 / 7px 7px,
+    radial-gradient(circle, #f3e6bb 70%, transparent 70%) 90% 100% / 4px 4px;
+    background-repeat: no-repeat;
+    transition: transform .3s ease-out, top 1s cubic-bezier(.2, 2, .6, 1.5);
+}
+.buttons__calculate button::before {
+    top: 0;
+}
+.buttons__calculate button::after {
+    bottom: 0;
+    transition-property: transform, bottom;
+}
+.buttons__calculate button._animate::before, .buttons__calculate button._animate::after {
+    transform: scale(140%, 120%);
+}
+.buttons__calculate button._animate::before {
+    top: -60%;
+}
+.buttons__calculate button._animate::after {
+    bottom: -60%;
+}
+.buttons__reset button {
+    transition: border-radius .5s ease;
+}
+.buttons__reset button._animate {
+    border-radius: 5px;
+}
+
+body{display:block !important}
